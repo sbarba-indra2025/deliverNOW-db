@@ -12,6 +12,7 @@ La base de datos contiene las siguientes tablas:
 - **usuarios**: Almacena la información de los usuarios registrados, incluyendo sus datos de pago.
 - **proveedores**: Contiene los proveedores de productos (restaurantes y supermercados).
 - **productos**: Almacena los productos disponibles de cada proveedor.
+- **pedidos**: Almacena los pedidos de los usuarios.
 
 ### Estructura de las Tablas
 
@@ -37,6 +38,14 @@ La base de datos contiene las siguientes tablas:
   - `nombre`: Nombre del producto.
   - `precio`: Precio del producto.
   - `proveedor_id`: Referencia al proveedor que ofrece el producto.
+
+- **pedidos**:
+  - `id`: Identificador único del pedido.
+  - `categoria`: Categoría del pedido (comida o supermercado).
+  - `proveedor_id`: Referencia al proveedor para el pedido.
+  - `productos`: Lista de referencias a los productos del pedido.
+  - `usuario_id`: Referencia al usuario que realizó el pedido.
+  - `estado`: Estado del pedido (pendiente, pagado, entregando, completado)
 
 ### Datos de Prueba
 
