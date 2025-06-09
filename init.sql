@@ -31,6 +31,16 @@ CREATE TABLE productos (
   proveedor_id INT REFERENCES proveedores(id)
 );
 
+-- crea la tabla de pedidos
+CREATE TABLE pedidos (
+  id SERIAL PRIMARY KEY,
+  categoria VARCHAR(50),
+  proveedor_id BIGINT REFERENCES proveedores(id),
+  productos BIGINT[],
+  usuario_id BIGINT REFERENCES usuarios(id),
+  estado VARCHAR(15) DEFAULT 'pendiente'
+);
+
 -- INSERCCIÓN DE DATOS PRECARGADOS DE PRUEBA --
 
 -- inserta datos de prueba en la tabla de repartidores
