@@ -45,6 +45,7 @@ La base de datos contiene las siguientes tablas:
   - `proveedor_id`: Referencia al proveedor para el pedido.
   - `productos`: Lista de referencias a los productos del pedido.
   - `usuario_id`: Referencia al usuario que realizó el pedido.
+  - `repartidor_id`: Referencia al repartidor para el pedido.
   - `estado`: Estado del pedido (pendiente, pagado, entregando, completado)
 
 ### Datos de Prueba

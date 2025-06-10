@@ -38,6 +38,7 @@ CREATE TABLE pedidos (
   proveedor_id BIGINT REFERENCES proveedores(id),
   productos BIGINT[],
   usuario_id BIGINT REFERENCES usuarios(id),
+  repartidor_id BIGINT REFERENCES repartidores(id),
   estado VARCHAR(15) DEFAULT 'pendiente'
 );
 
